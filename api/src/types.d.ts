@@ -5,3 +5,11 @@ export interface Project {
   createdAt: string
   updatedAt: string
 }
+
+export interface Task {
+  id: string
+  title: string
+  projectId: string
+  createdAt: string
+  updatedAt: string
+}
