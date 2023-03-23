@@ -6,7 +6,8 @@
     "outDir": "dist",
     "sourceMap": true,
     "noImplicitAny": true,
-    "types": ["node"]
+    "types": ["node"],
+    "strictNullChecks": true
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "src/config"],
 }

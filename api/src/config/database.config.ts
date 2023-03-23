@@ -1,7 +1,7 @@
-import mongoose from "mongoose"
-import { MONGODB_URI } from "./general.config"
+import mongoose from 'mongoose'
+import { MONGODB_URI } from './general.config'
 
-export const connectDB = async () => {
+export const connectDB = async (): Promise<void> => {
   try {
     const conn = await mongoose.connect(MONGODB_URI)
     console.log(`Mongodb connected: ${conn.connection.name}`)

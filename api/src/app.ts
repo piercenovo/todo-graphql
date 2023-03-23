@@ -1,18 +1,18 @@
-import { ApolloServer } from '@apollo/server';
-import { expressMiddleware } from '@apollo/server/express4';
-import cors from 'cors';
-import express from 'express';
-import http from 'http';
-import { typeDefs } from './graphql/typeDefs';
-import { resolvers } from './graphql/resolvers';
+import { ApolloServer } from '@apollo/server'
+import { expressMiddleware } from '@apollo/server/express4'
+import cors from 'cors'
+import express from 'express'
+import http from 'http'
+import { typeDefs } from './graphql/typeDefs'
+import { resolvers } from './graphql/resolvers'
 
-export async function startApolloServer (){
+export async function startApolloServer (): Promise<void> {
   const app = express()
   const httpServer = http.createServer(app)
 
   const server = new ApolloServer({
     typeDefs,
-    resolvers,
+    resolvers
   })
 
   await server.start()
@@ -23,5 +23,5 @@ export async function startApolloServer (){
     port: 4000
   }, resolve))
 
-  console.log(`🚀 Server ready at http://localhost:4000/graphql`);
+  console.log('🚀 Server ready at http://localhost:4000/graphql')
 }
