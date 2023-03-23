@@ -1,0 +1,11 @@
+{
+  "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ],
+    "parserOptions": {
+      "project": [
+          "./api/tsconfig.json",
+          "./app/tsconfig.json"
+      ]
+  }
+}
