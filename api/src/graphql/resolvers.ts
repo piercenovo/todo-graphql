@@ -55,5 +55,11 @@ export const resolvers = {
       if (!updatedTask) throw new Error('Project not found')
       return updatedTask
     }
+  },
+  Project: {
+    tasks: async (parent: ProjectType) => await Task.find({ projectId: parent._id })
+  },
+  Task: {
+    project: async (parent: TaskType) => await Project.findById(parent.projectId)
   }
 }

@@ -4,6 +4,7 @@ export interface Project {
   description: string
   createdAt: string
   updatedAt: string
+  tasks: Task[]
 }
 
 export interface Task {
