@@ -36,7 +36,7 @@ export function ProjectForm (): JSX.Element {
 
   return (
     <form
-     className='w-full md:w-2/4 lg:w-2/3'
+     className='w-full md:w-2/4'
      onSubmit={handleSubmit}>
       {error && <p>{error.message}</p>}
       <input
