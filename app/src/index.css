@@ -6,3 +6,15 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: dark;
 }
+
+.project-list::-webkit-scrollbar {
+  @apply w-[0.95rem];
+}
+
+.project-list::-webkit-scrollbar-thumb {
+  @apply rounded-lg border-[3px] border-solid border-transparent bg-[#606060] hover:bg-[#909090] bg-clip-content;
+}
+
+.project-list::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}

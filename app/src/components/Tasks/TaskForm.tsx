@@ -21,9 +21,12 @@ export function TaskForm (): JSX.Element {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="title" />
-      <button>Agregar</button>
+    <form onSubmit={handleSubmit} className='mt-2'>
+      <input
+        className='w-full p-2 rounded-lg mb-2'
+        placeholder='Escribe una tarea'
+        type="text" name="title" />
+      <button className='bg-teal-600 w-full p-2 rounded-lg'>Agregar</button>
     </form>
   )
 }

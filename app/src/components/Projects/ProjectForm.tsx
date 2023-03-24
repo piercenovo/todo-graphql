@@ -35,7 +35,9 @@ export function ProjectForm (): JSX.Element {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+     className='w-full md:w-2/4 lg:w-2/3'
+     onSubmit={handleSubmit}>
       {error && <p>{error.message}</p>}
       <input
       type="text"
@@ -44,6 +46,7 @@ export function ProjectForm (): JSX.Element {
       onChange={handleChange}
       value={project.name}
       ref={titleInput}
+      className='rounded-lg shadow-md p-4 mb-3 w-full'
       />
       <textarea
       name="description"
@@ -51,8 +54,11 @@ export function ProjectForm (): JSX.Element {
       placeholder="Escribe una descripción"
       onChange={handleChange}
       value={project.description}
+      className='rounded-lg shadow-md p-4 block w-full mb-3'
       />
-      <button disabled={!project.name || !project.description || loading}>Guardar</button>
+      <button
+        className='bg-teal-600 px-4 py-1 rounded-lg text-lg mb-3 disabled:bg-zinc-400'
+        disabled={!project.name || !project.description || loading}>Guardar</button>
     </form>
   )
 }
