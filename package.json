@@ -11,6 +11,7 @@
   "scripts": {
     "app": "pnpm --filter app dev",
     "api": "pnpm --filter api dev",
+    "start": "concurrently \"pnpm api\" \"pnpm app\"",
     "comm": "sui-mono commit"
   },
   "keywords": [],
