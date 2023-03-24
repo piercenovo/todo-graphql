@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { useMutation } from '@apollo/client'
-import { CREATE_PROJECT, GET_PROJECTS } from '../graphql/projects'
+import { CREATE_PROJECT } from '../../graphql/projects'
 
 const initialState = {
   name: '',
@@ -12,12 +12,7 @@ export function ProjectForm (): JSX.Element {
   const titleInput = useRef<HTMLInputElement>(null)
 
   const [createProject, { loading, error }] = useMutation(CREATE_PROJECT, {
-    refetchQueries: [
-      {
-        query: GET_PROJECTS
-      },
-      'GetProjects'
-    ]
+    refetchQueries: ['getProjects']
   })
 
   const handleChange = (event: any): void => {

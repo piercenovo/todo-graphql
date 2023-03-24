@@ -19,5 +19,17 @@ export interface GetProjects {
   projects: Project[]
 }
 
+export interface GetProject {
+  project: Project
+}
+
+export interface GetTasks {
+  tasks: Task[]
+}
+
+export interface GetTask {
+  task: Task
+}
+
 export type ProjectID = string
 export type TaskID = string

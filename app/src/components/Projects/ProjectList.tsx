@@ -1,6 +1,6 @@
 import { useQuery } from '@apollo/client'
-import { GET_PROJECTS } from '../graphql/projects'
-import { type GetProjects } from '../types'
+import { GET_PROJECTS } from '../../graphql/projects'
+import { type GetProjects } from '../../types'
 import { ProjectCard } from './ProjectCard'
 
 export function ProjectList (): JSX.Element {
