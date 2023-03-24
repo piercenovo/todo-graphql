@@ -1,5 +1,5 @@
 export interface Project {
-  id: string
+  _id: string
   name: string
   description: string
   createdAt: string
@@ -7,9 +7,12 @@ export interface Project {
 }
 
 export interface Task {
-  id: string
+  _id: string
   title: string
   projectId: string
   createdAt: string
   updatedAt: string
 }
+
+export type ProjectID = string
+export type TaskID = string
