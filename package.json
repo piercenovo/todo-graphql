@@ -11,10 +11,11 @@
   "scripts": {
     "api": "pnpm --filter api dev",
     "app": "pnpm --filter app dev",
-    "start": "concurrently \"pnpm api\" \"pnpm app\"",
+    "dev": "concurrently \"pnpm api\" \"pnpm app\"",
     "build-api": "pnpm --filter api build",
     "build-app": "pnpm --filter app build",
-    "deplo": "concurrently \"pnpm build-api\" \"pnpm build-app\"",
+    "build": "concurrently \"pnpm build-api\" \"pnpm build-app\"",
+    "start": "concurrently \"pnpm --filter api start\" \"pnpm --filter app preview\"",
     "comm": "sui-mono commit"
   },
   "keywords": [],
