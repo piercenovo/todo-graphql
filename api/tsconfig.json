@@ -1,12 +1,20 @@
 {
   "compilerOptions": {
-    "module": "NodeNext",
+    "target": "es2016",
+    "module": "commonjs",
     "moduleResolution": "node",
-    "baseUrl": "src",
+    "lib": ["dom", "ES6"],
     "outDir": "dist",
+    "rootDir": "src",
     "sourceMap": true,
     "noImplicitAny": true,
-    "types": ["node"],
+    "strictNullChecks": true,
+    "removeComments": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
   },
   "include": ["src/**/*", "src/config"],
+  "exclude": ["node_modules", "dist"]
 }

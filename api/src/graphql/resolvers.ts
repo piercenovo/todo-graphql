@@ -1,4 +1,4 @@
-import { type Project as ProjectType, type Task as TaskType, type ProjectID, type TaskID } from 'types'
+import { type Project as ProjectType, type Task as TaskType, type ProjectID, type TaskID } from '../types'
 
 import Project from '../models/project.model'
 import Task from '../models/task.model'
