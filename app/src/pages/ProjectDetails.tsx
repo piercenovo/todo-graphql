@@ -32,7 +32,7 @@ export function ProjectDetails (): JSX.Element {
       }
     })
     if (result.data.deletedProject._id) {
-      navigate('/projects')
+      navigate('/')
     }
   }
 
@@ -44,7 +44,7 @@ export function ProjectDetails (): JSX.Element {
       {deleteError && (
         <p className="bg-red-500 p-2 mb-2 text-center">{deleteError.message}</p>
       )}
-      <Link to='/projects'>
+      <Link to='/'>
         <button
           className='bg-cyan-600 px-3 py-2 rounded-lg'
           >

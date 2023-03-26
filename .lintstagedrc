@@ -1,5 +1,5 @@
 {
-  "{api,app}**/*.{ts,tsx}": [
+  "{api,app}/src/**/*.{ts,tsx}": [
     "eslint"
   ]
 }

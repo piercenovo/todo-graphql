@@ -6,7 +6,7 @@ export const ProjectCard: React.FC<Props> = ({ _id, name, description }) => {
 
   return (
     <div
-      onClick={() => { navigate(`/projects/${_id}`) }}
+      onClick={() => { navigate(`/proyecto/${_id}`) }}
       className='
         bg-zinc-800
         w-full

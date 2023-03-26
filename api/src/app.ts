@@ -10,6 +10,7 @@ import path from 'path'
 
 export async function startApolloServer (): Promise<void> {
   const app = express()
+
   const httpServer = http.createServer(app)
 
   const server = new ApolloServer({
@@ -21,11 +22,13 @@ export async function startApolloServer (): Promise<void> {
 
   app.use('/graphql', cors<cors.CorsRequest>(), express.json(), expressMiddleware(server))
 
+  app.use(express.json())
+  app.use(cors())
+  app.use(express.static(path.join(__dirname, '../../app/dist')))
+
   await new Promise<void>(resolve => httpServer.listen({
     port: PORT
   }, resolve))
 
   console.log(`🚀 Server running on port: ${PORT}`)
-
-  app.use(express.static(path.join(__dirname, '../../app/dist')))
 }
