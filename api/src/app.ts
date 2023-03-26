@@ -6,6 +6,7 @@ import http from 'http'
 import { typeDefs } from './graphql/typeDefs'
 import { resolvers } from './graphql/resolvers'
 import { PORT } from './config/general.config'
+import path from 'path'
 
 export async function startApolloServer (): Promise<void> {
   const app = express()
@@ -25,4 +26,6 @@ export async function startApolloServer (): Promise<void> {
   }, resolve))
 
   console.log(`🚀 Server running on port: ${PORT}`)
+
+  app.use(express.static(path.join(__dirname, '../../app/dist')))
 }

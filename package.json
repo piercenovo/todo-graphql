@@ -9,13 +9,13 @@
     "app"
   ],
   "scripts": {
-    "api": "pnpm --filter api dev",
-    "app": "pnpm --filter app dev",
-    "dev": "concurrently \"pnpm api\" \"pnpm app\"",
-    "build-api": "pnpm --filter api build",
-    "build-app": "pnpm --filter app build",
-    "build": "concurrently \"pnpm build-api\" \"pnpm build-app\"",
-    "start": "concurrently \"pnpm --filter api start\" \"pnpm --filter app preview\"",
+    "dev:api": "pnpm --filter api dev",
+    "dev:app": "pnpm --filter app dev",
+    "dev": "pnpm api && pnpm app",
+    "build:api": "pnpm --filter api build",
+    "build:app": "pnpm --filter app build",
+    "build": "pnpm build:api && pnpm build:app",
+    "start": "pnpm --filter api start",
     "comm": "sui-mono commit"
   },
   "keywords": [],
@@ -34,9 +34,6 @@
     "eslint-plugin-react": "7.32.2",
     "husky": "8.0.3",
     "lint-staged": "13.2.0",
-    "typescript": "^4.9.3"
-  },
-  "dependencies": {
-    "graphql": "16.6.0"
+    "typescript": "5.0.2"
   }
 }

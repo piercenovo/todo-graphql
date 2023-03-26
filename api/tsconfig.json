@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "ES2019",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
     "module": "commonjs",
-    "moduleResolution": "node",
-    "lib": ["dom", "ES6"],
-    "outDir": "dist",
     "rootDir": "src",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "removeComments": true,
-    "strict": true,
+    "outDir": "dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true
+    "strict": true,
+    "strictPropertyInitialization": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
   },
   "include": ["src/**/*", "src/config"],
   "exclude": ["node_modules", "dist"]
